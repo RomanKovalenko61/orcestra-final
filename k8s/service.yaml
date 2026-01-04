@@ -4,6 +4,10 @@ metadata:
   name: orcestra-final-service
   labels:
     app: orcestra-final
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "8080"
+    prometheus.io/path: "/actuator/prometheus"
 spec:
   type: ClusterIP
   selector:
